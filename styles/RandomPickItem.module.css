@@ -1,0 +1,28 @@
+.listItem {
+    list-style: none;
+    background-color: var(--primary-color);
+    display: block;
+    color: white;
+    font-size: 20px;
+    min-width: 150px;
+    max-width: 100%;
+    word-wrap: break-word;
+    padding: 10px 18px;
+    text-align: center;
+    border-radius: 6px;
+    position: relative;
+}
+
+.removeItemBtn {
+    position: absolute;
+    top: 0;
+    left: -5px;
+    background: none;
+    border: none;
+    outline: none;
+    color: white;
+}
+
+.removeItemBtn span {
+    font-size: 16px;
+}

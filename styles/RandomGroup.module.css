@@ -1,0 +1,250 @@
+.container {
+    padding: 0 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.createGroupContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.inputsContainer {
+    display: flex;
+    align-items: center;
+    margin: 10px 0 20px;
+    justify-content: center;
+    gap: 40px;
+    height: 75px;
+}
+
+.nameForm {
+    width: 60%;
+}
+
+.nameInput {
+    background: none;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid var(--text-color);
+    font-size: 24px;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.groupInputContainer {
+    font-size: 20px;
+}
+
+.groupInput {
+    background: none;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid var(--text-color);
+    text-align: center;
+    font-size: 20px;
+    width: 50px;
+}
+
+.btn {
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 6px 14px;
+    border: none;
+    border-radius: 6px;
+    transition: background-color 250ms ease-out;
+}
+
+.addBtn {
+    width: 100px;
+    margin-right: 5px;
+    background-color: var(--success-color);
+}
+
+.addBtn:hover {
+    background-color: var(--success-color-darker);
+}
+
+.clearBtn {
+    width: 100px;
+    background-color: var(--danger-color);
+}
+
+.clearBtn:hover {
+    background-color: var(--danger-color-darker);
+}
+
+.createBtn {
+    padding: 8px 16px;
+    font-size: 20px;
+    background-color: var(--primary-color);
+}
+
+.createBtn:hover {
+    background-color: var(--primary-color-darker);
+}
+
+.createBtn:disabled {
+    background-color: var(--disabled-color);
+    cursor: default;
+}
+
+
+.namesTable {
+    width: 400px;
+    flex-grow: 1;
+    margin-bottom: 20px;
+    overflow-y: hidden;
+    font-size: 1rem;
+}
+
+.namesTableHeader {
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: 600;
+    padding: 8px 0;
+    border-radius: 6px 6px 0 0;
+    background-color: var(--primary-color);
+    color: white;
+    height: 40px;
+}
+
+.namesTableContent {
+    border: 2px solid var(--primary-color);
+    border-top: none;
+    max-height: calc(100% - 40px);
+    overflow-y: auto;
+    width: 100%;
+    font-size: 1em;
+}
+
+.nameItem {
+    padding: 5px;
+    border-bottom: inherit;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+}
+
+.nameText {
+    flex-grow: 1;
+    overflow-x: hidden;
+    word-wrap: break-word;
+}
+
+.nameItem button {
+    background: none;
+    outline: none;
+    border: none;
+    height: 20px;
+}
+
+.nameItem:last-of-type {
+    border-bottom: none;
+}
+
+.groupsTableContainer {
+    flex: 1;
+    overflow-y: auto;
+}
+
+.groupsTable {
+    width: 400px;
+    border: 2px solid var(--primary-color);
+    border-top: none;
+    margin: 0 auto 20px;
+}
+
+.groupHeader {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 5px 3px;
+}
+
+.groupContent {
+    padding: 3px;
+    background-color: var(--background-color);
+}
+
+.groupItem {
+    padding: 3px 0;
+    max-width: 100%;
+    word-wrap: break-word;
+}
+
+.resetButtonContainer {
+    margin: 10px 0;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.resetButtonContainer button {
+    background-color: var(--primary-color);
+}
+
+.resetButtonContainer button:hover {
+    background-color: var(--primary-color-darker);
+}
+
+@media (max-width: 720px) {
+    .nameForm {
+        width: 55%;
+    }
+
+    .groupInputContainer {
+        font-size: 16px;
+    }
+
+    .groupInput {
+        font-size: 18px;
+        width: 30px;
+    }
+}
+
+@media (max-width: 540px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    .inputsContainer {
+        gap: 15px;
+    }
+
+    .nameForm {
+        width: 45%
+    }
+
+    .nameInput {
+        font-size: 16px;
+    }
+
+    .addBtn {
+        display: none;
+    }
+
+    .clearBtn {
+        width: fit-content;
+        padding: 4px 7px;
+        font-size: 14px;
+        border-radius: 5px;
+    }
+
+    .groupInputContainer {
+        font-size: 14px;
+    }
+
+    .namesTable, .groupsTable{
+        width: 320px;
+        font-size: 0.9rem;
+    }
+}
